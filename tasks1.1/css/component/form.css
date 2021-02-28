@@ -1,0 +1,58 @@
+.section--form {
+  padding: 20px;
+  border-top: 1px dashed #e5e5e5;
+  border-bottom: 1px dashed #e5e5e5;
+}
+.form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.text__sub {
+  position: relative;
+  padding-left: 50px;
+  line-height: 16px;
+  font-style: italic;
+}
+
+.text__sub::before {
+  content: "";
+  background: url("../../img/msg.svg") center;
+  width: 32px;
+  height: 26px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+
+.form--subscribe {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input {
+  margin-right: 50px;
+  background: var(--clr-white);
+  border: 1px solid var(--clr-grey);
+  padding-left: 8px;
+  outline: 1px solid var(--clr-grey);
+}
+
+.input:focus {
+  background: var(--clr-grey);
+}
+
+.btn-sub {
+  background: var(--clr-gradient);
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 2px;
+  outline: 1px solid var(--clr-grey);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-sub:hover {
+  background: var(--clr-gradient--hover);
+  transition: var(--transition);
+}

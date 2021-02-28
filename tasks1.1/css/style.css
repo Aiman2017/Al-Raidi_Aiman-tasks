@@ -1,0 +1,12 @@
+@import url("./component/home.css");
+@import url("component/nav.css");
+@import url("component/main.css");
+@import url("component/form.css");
+@import url("component/card.css");
+@import url("component/footer.css");
+
+/* mobile */
+@import url("./mobile/home.css");
+@import url("mobile/nav.css");
+@import url("mobile/main.css");
+@import url("mobile/footer.css");
