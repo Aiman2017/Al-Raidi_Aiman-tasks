@@ -1,0 +1,46 @@
+/* card */
+.section-card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1;
+  width: 100%;
+}
+
+.article__card {
+  width: calc(24% - 1.5rem);
+}
+
+.card--img {
+  width: 100%;
+  border: 11px solid $white;
+  box-shadow: 1px 3px 6px $grey;
+}
+
+.card__list--text {
+  margin-top: 20px;
+}
+
+.items--text {
+  cursor: pointer;
+  display: inline;
+}
+
+.card__title {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.card__text {
+  margin: 15px 0;
+  line-height: 1.3;
+}
+
+.card__date {
+  color: $grey;
+}
+
+.card__date:hover {
+  color: $grey--hover;
+}

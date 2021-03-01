@@ -1,0 +1,102 @@
+.banner__logo {
+  width: 120px;
+}
+
+.banner--list {
+  margin-top: 0.975rem;
+}
+
+.list__item {
+  margin-bottom: 46px;
+  position: relative;
+}
+
+.list__item--link {
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+
+.item__icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.item__tastemakers {
+  background: url("../../img/food.svg");
+}
+
+.item__blog {
+  background: url("../../img/menu.svg") no-repeat;
+}
+
+.item__Alist {
+  background: url("../../img/list.svg") no-repeat;
+}
+
+.item__contribure {
+  background: url("../../img/camera-icon.svg") no-repeat;
+}
+
+.item__about {
+  background: url("../../img/about-icon.svg") no-repeat;
+}
+
+.section__title {
+  text-transform: uppercase;
+  font-size: 12px;
+  position: relative;
+}
+
+.section__title::after {
+  content: "";
+  width: 80%;
+  height: 1px;
+  border-bottom: 1px dashed var(--clr-grey);
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+
+.section__title--friends {
+  margin-bottom: 10px;
+}
+
+.btn {
+  position: relative;
+  margin: 22.5px 0;
+  background-color: transparent;
+  padding: 10px 13px 10px 29px;
+  color: var(--clr-primary);
+  border: 1px solid var(--clr-grey);
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: $transition;
+}
+
+.btn::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: url("../../img/twitter-icon.svg") no-repeat;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  display: inline-flex;
+  margin-left: 5px;
+}
+
+.btn:hover {
+  background-color: $grey;
+  color: $white;
+  transition: $transition;
+}
+
+.section__text {
+  line-height: 24.5px;
+  font-size: 12px;
+  font-style: italic;
+}
