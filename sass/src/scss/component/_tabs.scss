@@ -1,0 +1,32 @@
+.wrapper-tabs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tabs__list {
+    background: $sky;
+    margin-right: 2px;
+    padding: 24px 0 24px 20px;
+    flex-grow: 1;
+}
+
+.tabs__list:nth-child(n + 3) {
+    margin-right: 0;
+}
+
+.tabs__list:hover {
+    background: $sky-dark;
+    transition: $transition;
+}
+
+.list--item {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.item-text {
+    font-size: 10px;
+    line-height: 19px;
+    font-style: italic;
+}

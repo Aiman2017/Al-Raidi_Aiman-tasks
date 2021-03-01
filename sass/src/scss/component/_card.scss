@@ -15,8 +15,8 @@
 
 .card--img {
   width: 100%;
-  border: 11px solid var(--clr-white);
-  box-shadow: 1px 3px 6px var(--clr-grey);
+  border: 11px solid $white;
+  box-shadow: 1px 3px 6px $grey;
 }
 
 .card__list--text {
@@ -38,9 +38,9 @@
 }
 
 .card__date {
-  color: var(--clr-grey);
+  color: $grey;
 }
 
 .card__date:hover {
-  color: var(--clr-grey--hover);
+  color: $grey--hover;
 }

@@ -1,0 +1,31 @@
+.main-wrapper {
+  margin-bottom: 32px;
+}
+
+.wrapper--banner {
+  position: relative;
+}
+
+.banner__description {
+  position: absolute;
+  bottom: 16%;
+}
+
+.banner__text {
+  letter-spacing: 0.01em;
+  padding: 14px 24px 14px 21px;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 14px;
+}
+
+.banner__title {
+  display: inline-flex;
+  background: $white;
+}
+
+.banner__sub {
+  background: $black;
+  color: $white;
+  font-size: 14px;
+}

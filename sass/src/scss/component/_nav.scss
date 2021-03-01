@@ -1,13 +1,3 @@
-.aside-banner {
-  max-width: 17%;
-  padding-right: 1%;
-}
-
-.main {
-  max-width: 83%;
-}
-
-/* left side */
 .banner__logo {
   width: 120px;
 }
@@ -34,7 +24,7 @@
 }
 
 .item__tastemakers {
-  background: url("../../img/food-icon.svg");
+  background: url("../../img/food.svg");
 }
 
 .item__blog {
@@ -84,7 +74,7 @@
   border-radius: 5px;
   font-size: 10px;
   cursor: pointer;
-  transition: var(--transition);
+  transition: $transition;
 }
 
 .btn::before {
@@ -100,9 +90,9 @@
 }
 
 .btn:hover {
-  background-color: var(--clr-grey);
-  color: var(--clr-white);
-  transition: var(--transition);
+  background-color: $grey;
+  color: $white;
+  transition: $transition;
 }
 
 .section__text {
