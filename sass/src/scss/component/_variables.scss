@@ -9,3 +9,33 @@ $gradient: linear-gradient(180deg, #f4f3f3 0%, #bbb9b9 100%);
 $gradient--hover: linear-gradient(180deg, #d4d1d1 0%, #ece4e4 100%);
 $primary_links: #34aca69d;
 $transition: all 0.75s ease;
+
+
+// margin and padding
+
+$margin : 10px;
+$marginTop : 10px;
+$marginLeft : 10px;
+$marginBottom : 10px;
+$marginRight : 10px;
+
+$padding : 10px;
+$paddingTop : 10px;
+$paddingLeft : 10px;
+$paddingBottom : 10px;
+$paddingRight : 10px;
+
+// @function margins($marginElem) {
+//     @return map-get($margin, $marginElem)
+// };
+
+// @function paddings($padding, $paddingElem) {
+//     @return map-get($padding, $paddingElem)
+// };
+
+
+// FONTSIZE
+$fontSize : 16px;
+
+// border
+$border: 1px solid $grey;

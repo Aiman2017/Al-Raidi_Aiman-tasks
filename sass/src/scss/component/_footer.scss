@@ -1,42 +1,57 @@
 .footer {
-  padding: 30px 0;
-  display: flex;
-  justify-content: space-between;
+  padding-top: $paddingTop + 20;
+  padding-bottom: $paddingBottom + 20;
+  @include flexBetween;
   border-top: 2px solid $grey;
-}
 
-.footer__nav {
-  display: flex;
-}
+  @include response(tabland) {
+    margin: 0 30px;
+  }
 
-.footer__nav--text {
-  position: relative;
-  margin: 0 18px 0 0;
-}
+  &__nav {
+    display: flex;
 
-.footer__nav--text:not(:last-child)::after {
-  content: "";
-  width: 2px;
-  height: 100%;
-  background: $grey;
-  position: absolute;
-  right: -10px;
-  top: 0;
-}
+    &--text {
+      position: relative;
+      margin-right: $marginRight + 8;
 
-.footer__copyright {
-  color: $grey;
-  margin-top: 8px;
+      &:not(:last-child)::after {
+        content: "";
+        width: 2px;
+        height: 100%;
+        background: $grey;
+        position: absolute;
+        right: -10px;
+        top: 0;
+      }
+    }
+  }
+
+  &__copyright {
+    color: $grey;
+    margin-top: 8px;
+  }
 }
 
 /* address */
 .address__list {
-  display: flex;
-  align-items: center;
+  @include flex;
+
+  &--social:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &--fb {
+    width: 17px;
+    height: 33px;
+  }
 }
 
-.adress__list--social:not(:last-child) {
-  margin-right: 15px;
+.address__list--facebook,
+.adress__icon {
+  @include response(tabland) {
+    background-size: 80%;
+  }
 }
 
 .adress__icon {
@@ -44,16 +59,12 @@
   height: 33px;
 }
 
-.address__list--twitter {
-  background: url("../../img/twiiter.svg") no-repeat;
-}
+//через цикл
+$pic_icons : (address__list--twitter, address__list--facebook, address__list--links);
 
-.address__list--facebook {
-  background: url("../../img/fb.svg") no-repeat;
-  width: 17px;
-  height: 33px;
-}
-
-.address__list--links {
-  background: url("../../img/links.svg") no-repeat;
+@each $icons in $pic_icons {
+  .icon-#{$icons} {
+    background-image: url("../../img/svg/#{$icons}.svg");
+    background-repeat: no-repeat;
+  }
 }

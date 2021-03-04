@@ -68,7 +68,7 @@ const fontsStyle = (done) => {
 // svg
 
 const svgSprites = () => {
-  return src("./src/img/**.svg")
+  return src("./src/img/svg/**.svg")
     .pipe(
       svgSprite({
         mode: {
@@ -126,9 +126,9 @@ const htmlInclude = () => {
 // images
 const imgToApp = () => {
   return src([
-    "./src/img/**.jpg",
-    "./src/img/**.png",
-    "./src/img/**.jpeg",
+    "./src/img/jpg/**.jpg",
+    "./src/img/png/**.png",
+    "./src/img/jpeg/**.jpeg",
   ]).pipe(dest("./app/img"));
 };
 

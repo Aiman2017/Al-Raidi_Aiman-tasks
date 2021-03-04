@@ -1,7 +1,7 @@
 html,
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: $fontSize - 2;
   color: $black;
 }
 
@@ -28,20 +28,24 @@ a:hover {
 }
 
 .visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
+  @include visuallyHidden;
 }
 
 .container__flex {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3.3rem;
+  @include flexes;
+  margin-top: $marginTop + 42.8;
+
+  @include response(desktop) {
+    margin: 40px 30px 0 30px;
+  }
+
+  @include response(tabland) {
+    flex-direction: column;
+  }
+
+  @include response(phone) {
+    margin: 0;
+  }
 }
 
 .container {

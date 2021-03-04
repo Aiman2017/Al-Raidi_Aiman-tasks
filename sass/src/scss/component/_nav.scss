@@ -1,98 +1,170 @@
+.aside-banner {
+  @include response(tabland) {
+    max-width: 100vw;
+    padding-top: $paddingTop + 10;
+    padding-bottom: $paddingBottom + 10;
+  }
+}
+
+.nav {
+  @include response(tabland) {
+    @include flexBetween;
+    margin-bottom: $marginBottom + 10;
+  }
+
+  @include response(phone) {
+    flex-direction: column;
+    margin-bottom: 0.85rem;
+  }
+}
+
 .banner__logo {
   width: 120px;
+
+  @include response(tablate) {
+    margin-right: $marginRight;
+  }
+
+  @include response(phone) {
+    margin-right: 0;
+  }
+}
+
+.logo__link {
+  @include response(phone) {
+    order: 1;
+  }
 }
 
 .banner--list {
   margin-top: 0.975rem;
+
+  @include response(tabland) {
+    display: flex;
+    margin-top: 0;
+  }
+
+  @include response(phone) {
+    margin-bottom: 25px;
+  }
 }
 
 .list__item {
   margin-bottom: 46px;
   position: relative;
+
+  @include response(tabland) {
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    &--link {
+      font-size: 18px;
+      flex-direction: column;
+    }
+  }
+
+  @include response(tabland) {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
 }
 
 .list__item--link {
   font-style: italic;
-  display: flex;
-  align-items: center;
+  @include flex;
+
+  @include response(tablate) {
+    font-size: $fontSize - 4;
+  }
 }
 
 .item__icon {
   width: 30px;
   height: 30px;
-  margin-right: 20px;
+  margin-right: $marginRight + 10;
+
+  @include response(tabland) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  @include response(tablate) {
+    display: none;
+  }
 }
 
-.item__tastemakers {
-  background: url("../../img/food.svg");
-}
+// Each
+$nav_icons : (item__tastemakers, item__blog, item__Alist, item__contribure, item__about);
 
-.item__blog {
-  background: url("../../img/menu.svg") no-repeat;
-}
-
-.item__Alist {
-  background: url("../../img/list.svg") no-repeat;
-}
-
-.item__contribure {
-  background: url("../../img/camera-icon.svg") no-repeat;
-}
-
-.item__about {
-  background: url("../../img/about-icon.svg") no-repeat;
+@each $icons in $nav_icons {
+  .icon-#{$icons} {
+    background-image: url("../../img/svg/#{$icons}.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .section__title {
   text-transform: uppercase;
   font-size: 12px;
   position: relative;
+
+  &::after {
+    content: "";
+    width: 80%;
+    height: 1px;
+    border-bottom: 1px dashed var(--clr-grey);
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+  }
+
+  &--friends {
+    margin-bottom: $marginBottom;
+  }
+
 }
 
-.section__title::after {
-  content: "";
-  width: 80%;
-  height: 1px;
-  border-bottom: 1px dashed var(--clr-grey);
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-}
-
-.section__title--friends {
-  margin-bottom: 10px;
+.section__notes {
+  @include response(tabland) {
+    display: none;
+  }
 }
 
 .btn {
   position: relative;
   margin: 22.5px 0;
   background-color: transparent;
-  padding: 10px 13px 10px 29px;
-  color: var(--clr-primary);
-  border: 1px solid var(--clr-grey);
+  padding: 10px 13px 10px 10px;
+  color: $primary;
+  border: $border;
   box-sizing: border-box;
   border-radius: 5px;
   font-size: 10px;
   cursor: pointer;
   transition: $transition;
-}
 
-.btn::before {
-  content: "";
-  width: 50px;
-  height: 50px;
-  background: url("../../img/twitter-icon.svg") no-repeat;
-  position: absolute;
-  top: 25%;
-  left: 0;
-  display: inline-flex;
-  margin-left: 5px;
-}
+  &::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url("../../img/twitter-icon.svg") no-repeat;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    display: inline-flex;
+    margin-left: 5px;
+  }
 
-.btn:hover {
-  background-color: $grey;
-  color: $white;
-  transition: $transition;
+  &:hover {
+    background-color: $grey;
+    color: $white;
+    transition: $transition;
+  }
+
 }
 
 .section__text {

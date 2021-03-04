@@ -1,3 +1,9 @@
+.main {
+  @include response(tabland) {
+    min-width: 100%;
+  }
+}
+
 .main-wrapper {
   margin-bottom: 32px;
 }
@@ -6,9 +12,20 @@
   position: relative;
 }
 
+.wrapper-tabs {
+  @include response(tablate) {
+    display: none;
+  }
+}
+
 .banner__description {
   position: absolute;
   bottom: 16%;
+
+  @include response(tablate) {
+    width: 100%;
+    bottom: 0;
+  }
 }
 
 .banner__text {
@@ -17,15 +34,30 @@
   font-style: italic;
   font-size: 22px;
   line-height: 14px;
+
+  @include response(tablate) {
+    padding: 10px 24px 10px 21px;
+  }
 }
 
 .banner__title {
   display: inline-flex;
   background: $white;
+
+  @include response(tablate) {
+    background-color: rgba(255, 255, 255, 0.7);
+    display: block;
+    font-size: 16px;
+  }
 }
 
 .banner__sub {
   background: $black;
   color: $white;
   font-size: 14px;
+
+  @include response(tablate) {
+    font-size: 10px;
+    padding-right: 0;
+  }
 }

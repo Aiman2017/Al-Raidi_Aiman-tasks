@@ -1,0 +1,68 @@
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexes {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flexWrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@mixin flexAround {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin flexDirection {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin borderDashed {
+    border-top: 1px dashed #e5e5e5;
+    border-bottom: 1px dashed #e5e5e5;
+}
+
+@mixin visuallyHidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+
+// BREAK-POINT (MEDIA)
+
+@mixin response($breakpoint) {
+    @if $breakpoint==phone {
+        @media (max-width:480px) {@content};
+    }
+
+    @if $breakpoint==tablate {
+        @media (max-width:768px) {@content};
+    }
+
+    @if $breakpoint==tabland {
+        @media (max-width:992px) {@content};
+    }
+
+    @if $breakpoint==desktop {
+        @media (max-width:1178px) {@content};
+    }
+}

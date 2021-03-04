@@ -1,59 +1,79 @@
 .section--form {
-  padding: 20px;
-  border-top: 1px dashed #e5e5e5;
-  border-bottom: 1px dashed #e5e5e5;
+  padding: $padding + 10;
+  @include borderDashed;
+
+  @include response(phone) {
+    margin-bottom: $marginBottom + 15;
+  }
 }
 
 .form {
-  display: flex;
-  justify-content: space-around;
+  @include flexAround;
+
+  &--subscribe {
+    @include flexBetween;
+  }
+
+  @include response(tablate) {
+    flex-direction: column;
+  }
 }
 
 .text__sub {
   position: relative;
-  padding-left: 50px;
   line-height: 16px;
   font-style: italic;
-}
 
-.text__sub::before {
-  content: "";
-  background: url("../../img/msg.svg") center;
-  width: 32px;
-  height: 26px;
-  position: absolute;
-  top: 4px;
-  left: 0;
-}
+  &::before {
+    content: "";
+    background: url("../../img/msg.svg") center;
+    width: 32px;
+    height: 26px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+  }
 
-.form--subscribe {
-  display: flex;
-  justify-content: space-between;
+  @include response(tablate) {
+    margin-bottom: $marginBottom + 10;
+  }
 }
 
 .input {
-  margin-right: 50px;
-  background: var(--clr-white);
-  border: 1px solid var(--clr-grey);
-  padding-left: 8px;
-  outline: 1px solid var(--clr-grey);
-}
+  margin-right: $marginRight + 40;
+  background: $white;
+  border: $border;
+  padding-left: $paddingLeft - 2;
+  outline: $border;
 
-.input:focus {
-  background: var(--clr-grey);
+  &:focus {
+    background: $border;
+  }
+
+  @include response(tablate) {
+    width: 100%;
+    padding: 8px 0;
+    padding-left: 8px;
+  }
 }
 
 .btn-sub {
-  background: var(--clr-gradient);
-  border: 1px solid #e5e5e5;
+  background: $gradient;
+  border: $border;
   box-sizing: border-box;
   border-radius: 2px;
-  outline: 1px solid var(--clr-grey);
+  outline: $border;
+  padding-top: $paddingTop - 2;
+  padding-bottom: $paddingBottom - 2;
   cursor: pointer;
-  transition: var(--transition);
-}
+  transition: $transition;
 
-.btn-sub:hover {
-  background: var(--clr-gradient--hover);
-  transition: var(--transition);
+  &:hover {
+    background: $gradient--hover;
+    transition: $transition;
+  }
+
+  @include response(tablate) {
+    padding: 0 15px;
+  }
 }
