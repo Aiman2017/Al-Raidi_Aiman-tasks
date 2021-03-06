@@ -59,26 +59,3 @@
 .address__list--links {
   background: url("../../img/links.svg") no-repeat;
 }
-
-/* mobile */
-.footer {
-  margin: 0 10px;
-}
-
-.footer__nav--text {
-  margin: 0 25px 0 0;
-}
-
-.footer__link {
-  font-size: 8px;
-  font-weight: bold;
-}
-
-.footer__copyright {
-  font-size: 12px;
-}
-
-.adress__icon,
-.address__list--facebook {
-  background-size: 70%;
-}
